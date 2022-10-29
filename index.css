@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Domine', serif;
+}
+:root{
+    --colorPrimary:red; 
+    --colorTransparent:rgba(255, 0, 0, 0.466);
+    --degrade:linear-gradient(45deg, gray,black);
+    --coloMenuFixer:rgb(151, 3, 3);
+}
+.header-container{
+    width: 100vw;
+    height: 100vh;
+    background:var(--degrade);
+    color: white;
+    position: relative;
+    
+}
+.nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: .8rem;}
+    
+    
+.nav.Tarja{
+    background-color:var(--coloMenuFixer);
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+
+}
+.nav .logo{
+    margin-left: 2rem;
+}
+.nav strong{
+    color: red;
+}
+
+.nav.Action{
+    background-color: red;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.menu li{
+    margin-left: 2.5rem;
+}
+
+.menu li:last-child{
+ margin-right: 4rem;
+ border: 2px solid white;
+ padding:.5rem 2rem;
+ border-radius: 1.5rem;
+ box-shadow: 2px 2px 2px var(--colorPrimary);
+}
+.menu li:last-child:hover{
+    cursor: pointer;
+    background-color: var(--colorTransparent);
+}
+.nav a{
+    color: white;
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.nav a:hover{
+color: var(--colorPrimary);
+border-top: 1px solid var(--colorPrimary);
+}
+.nav ul li:nth-child(4) a:hover{
+    border-top: none;
+    color:red;
+}
+
+.texts{
+    position: absolute;
+    top: 14rem;
+    margin-left: 5rem;
+    z-index: 1;
+}
+.texts h4{
+    font-size:1.5rem ;
+}
+.texts h3{
+    font-size: 2rem;
+}
+.texts h1{
+    color:var(--colorPrimary);
+    font-size: 4rem;
+}
+
+.btnLinks{
+    margin-left: 5rem;
+    position: absolute;
+    top: 25.5rem;
+    z-index: 1;
+    
+
+}
+
+.btnLinks a{
+    color: white;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px var(--colorPrimary);
+}
+
+.btnLinks a:nth-child(1){
+    padding: .5rem 3rem;
+    
+}
+.btnLinks a:nth-child(1):hover{
+    background-color: var(--colorTransparent);
+}
+.btnLinks a:nth-child(2){
+    padding: .5rem 3rem;
+    margin-left: 1rem;
+}
+.btnLinks a:nth-child(2):hover{
+    background-color: var(--colorTransparent);
+}
+
+.hamburguer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 1.5rem;
+    right: 2rem;
+    visibility: hidden;
+    z-index: 4;
+}
+
+.hamburguer span{
+    right: 1rem;
+    width: 2.5rem;
+    height: .35rem;
+    margin-bottom: 2px;
+    background-color: white;
+    
+
+}
+
+.header-container.Active .hamburguer span:nth-child(1){
+    transform: rotate(-45deg);
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    
+}
+.header-container.Active .hamburguer span:nth-child(2){
+    display: none;
+}
+.header-container.Active .hamburguer span:nth-child(3){
+    position: fixed;
+    transform: rotate(45deg);
+    background-color: red;
+    top: 2rem;
+    right: 2rem;
+}
+.perfil{
+    position: absolute;
+    z-index:0;
+    top: 0rem;
+    right:6rem;
+    width: 35rem;
+    height: 100vh;
+   
+}
+.perfil img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:1100px){
+    
+    .texts{
+     margin-left: 4rem;
+    }
+    .btnLinks{
+     margin-left: 9rem;
+    }
+    .hamburguer{
+        visibility: visible;
+    }
+    .menu {
+        display: none;
+    }
+
+    .header-container.Active .menu{
+        margin: 1rem;
+        display: flex;
+        position: absolute;
+        top: 3rem;
+        right: 0rem;
+        flex-direction: column;
+        z-index: 2;
+        width: 100vw;
+        height: 100vh;
+        background:linear-gradient(45deg, gray,black)
+        
+    }
+    .header-container.Active .menu li{  
+        width: 50%;
+        font-size: 1rem;
+        margin: 1rem auto;
+        border-bottom: 1px solid white;
+        text-align: center;
+        padding: 1rem;
+    }
+    .header-container.Active .menu li:hover{
+        border-bottom: 1px solid red;
+        background-color: rgba(0, 0, 255, 0.123);
+        border-radius: 2px;
+    }
+    .header-container.Active nav a{
+        border-top:none;
+    }
+    .header-container.Active .menu li:last-child{
+        border: none;
+        box-shadow: none;
+        border-bottom: 1px solid white;
+        border-radius: 0px;
+    }
+    .perfil{
+        visibility: hidden;
+    }
+    
+}
+
+@media screen and (max-width:650px) {
+    
+    .texts{
+        top: 12rem;
+        flex-wrap: wrap;
+        margin-left: 3rem;
+    }
+    .btnLinks{
+        top: 30.5rem;
+        margin-left: 2rem;
+    }
+}
+
+/*sobre mim*/
+
+.about{
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(45deg, gray,black);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutBox{
+    width: 80vw;
+    height: 60vh;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+.aboutBox:hover{
+    box-shadow: 5px 4px 6px black;
+}
+.aboutbox01{  
+    background-color: rgba(22, 19, 19, 0.733);
+    height: 60vh;
+    width: 50%;
+}
+
+.aboutbox01 img{
+    width: 105%;
+    height: 100%;
+    margin-right:10rem;
+    
+}
+
+.aboutbox02{
+    padding: 0.5rem;
+    width: 25rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.aboutbox02 h1{
+    margin-bottom: 1rem;
+}
+.aboutbox02 p{
+    text-align: justify;
+}
+
+.aboutbox02 button{
+    margin-top: .5rem;
+    width: 8rem;
+    height: 2rem;
+    background-color: var(--coloMenuFixer);
+    border: none;
+    color: white;
+    border-radius: .1rem;
+}
+.aboutbox02 button:hover{
+    cursor: pointer;
+    background-color: black;
+    transition-property: background;
+    transition-duration: .5s;
+
+}
+
+@media screen and (max-width:900px){
+    .aboutBox{
+        background:none;
+        color: white;
+        flex-direction: column;
+        height: 75vh;
+    }
+
+    .aboutbox01{  
+        background-color: rgba(22, 19, 19, 0.733);
+        border-radius: 2rem;
+        height: 50vh;
+        width: 40%;
+        position: relative;
+    }
+    .aboutbox01 img{
+        width: 150%;
+        height: 100%;
+        position: absolute;
+        left: -4.5rem;    
+        
+    }
+    .aboutbox02 h1{
+        margin-top: 1.5rem;
+        
+    }
+    .aboutbox02 button{
+        margin-top: 1.5rem;
+        
+    }
+}
+@media screen and (max-width:650px){
+    .aboutbox01{  
+        
+        height: 40vh;
+        width: 45%;
+       
+    }
+    .aboutbox01 img{
+        width: 170%;
+        height: 100%;
+        position: absolute;
+        left: -4.5rem;    
+        
+    }
+    
+}
+/*projetos*/
+.projects{
+    background: var(--degrade);
+    width: 100vw;
+    height: 100vh;
+}
+.boxProject{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 90%;
+    height: 70.8%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: auto;
+    padding-top: 6rem;
+}
+.card{
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 12.5rem;
+    height: 15rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    align-items: center;
+    text-align: justify;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .3rem;
+
+}
+.projects h1{
+    color: white;
+    text-align: center;
+    padding-top: 5rem;
+}
+.card:hover{
+    cursor: pointer;
+    background-color: var(--coloMenuFixer);
+    box-shadow: 4px 4px 3px black;
+    color: white;
+}
+.card .image{
+  width: 5rem;
+  border-radius: 10rem;
+}
+.p{
+    font-size: .5rem;
+}
+.projects button{
+
+    margin-top: 1rem;
+    margin-left: 10rem;
+    width: 8rem;
+    height: 2rem;
+    background-color: var(--coloMenuFixer);
+    border: none;
+    color: white;
+    border-radius: .1rem;
+}
+.projects button:hover{
+    cursor: pointer;
+    background-color: black;
+    transition-property: background;
+    transition-duration: .5s;
+
+}
+@media screen and (max-width:1100px){
+    .boxProject{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        overflow: auto;
+        height: 70.8%
+    }}
+@media screen and (max-width:800px){
+    .boxProject{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 90%;
+        height: 70.8%;
+        box-sizing: border-box;
+        overflow: auto;
+        padding-top: 6rem;
+    }
+    
+    
+}
+/*contatos*/
+.contacts{
+    background: var(--degrade);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 10vh auto ;
+
+}
+
+.contactsH1{
+    grid-column: 1/3;
+    color: white;
+    text-align: center;
+    margin: 6rem auto;
+    font-size: 4rem;
+}
+
+.contactsForm form{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    align-items: center;
+    justify-content: center;
+    margin: 9rem 2rem;
+    padding: 1rem;
+    width: 50vw;
+    
+}
+.contactsForm form label{
+    margin-bottom: .5rem;
+}
+#name{
+    width: 30rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+#email{
+    width: 30rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+#message{
+    width: 30rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+#submit{
+    width: 7rem;
+    height: 2.5rem;
+    background-color: var(--coloMenuFixer);
+    border: none;
+}
+#submit:hover{
+    background-color: white;
+    color: var(--coloMenuFixer);
+}
+
+.contacts02{
+    display: flex;
+    flex-direction: column;
+    margin-top: 11rem;
+    padding: 1rem;
+    width: 50vw;
+    
+   
+}
+
+.contacts02 div{
+   margin-bottom: 1.5rem;
+   color: white;
+   
+   
+   
+}
+.contacts02 div:nth-child(4){
+    display: flex;
+
+}
+.contacts02 div:nth-child(4) h3{
+    margin-left: .5rem;
+
+}
+.contacts02 div a{
+    margin-left: .5rem;
+    color: white;
+}
+
+@media screen and (max-width:900px){
+    .contacts{
+        
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100vw;
+        height: 120%;
+        
+    
+    }
+    .contactsH1{
+        margin-top: 5rem;
+    
+    }
+    .contactsForm form{
+        
+        align-items: center;
+        justify-content: center;
+        margin: .5rem auto;
+        padding: 1rem;
+        width: 80%;
+        height: 30%;
+        
+    }
+    
+    .contacts02{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+
+    
+}
+
+@media screen and (max-width:600px) {
+    #name{
+        width: 25rem;
+        height: 2rem;
+       
+    }
+    #email{
+        width: 25rem;
+        height: 2rem;
+        
+    }
+    
+    #message{
+        width: 25rem;
+        height: 8rem;
+        
+    }
+    #submit{
+        width: 7rem;
+        height: 2.5rem;
+        
+    }
+    
+}
+
+/*footer*/
+
+footer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 250px;
+    background-color: var(--coloMenuFixer);
+    color: white;
+    justify-content:space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+footer a{
+    color: white;
+}
+
+footer div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    
+}
+footer div:nth-child(1) a{
+    margin-bottom: 1rem;
+}
+footer div:nth-child(1) a i{
+    margin-right: 0.5rem;
+}
+footer div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+footer div:nth-child(2) a{
+    margin-bottom: 1rem;
+}
+footer div:nth-child(2) a i{
+    margin-right: 0.5rem;
+}
+
+footer div:nth-child(3) li{
+    margin-bottom: .5rem;
+}
+footer div:nth-child(3) h1{
+    margin-bottom: 1rem;
+}

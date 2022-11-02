@@ -9,153 +9,141 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body >
-    <header class="header-container" id="header-container">
-         <nav class="nav" id="nav">
-          <a class="logo" href="">Portifo<strong>lio</strong></a>
-          <ul class="menu">
-            <li><a href="#">Menu</a></li>
-            <li><a href="#aboutMe">Sobre min</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#contacts">Contatos</a></li>
+    <div class="boxContainer">
+      <header class="header-container" id="header-container">
+           <nav class="nav" id="nav">
+            <a class="logo" href="">Portifo<strong>lio</strong></a>
+            <ul class="menu">
+              <li><a href="#">Menu</a></li>
+              <li><a href="#aboutMe">Sobre min</a></li>
+              <li><a href="#projects">Projetos</a></li>
+              <li><a href="#contacts">Contatos</a></li>
+            </ul>
+           </nav>
+           <div class="texts">
+            <h4>Olá, eu sou</h4>
+            <h1>JOSUÉ MENDES</h1>
+            <h3>DESENVOLVIMENTO FRONT-END</h3>
+           </div>
+           <div class="btnLinks">
+            <a rel="noopener" href="https://www.linkedin.com/in/josue-mendes-311181207/" target="_blank">Linkedin</a>
+            <a rel="noopener" href="https://github.com/Josue-Mendes-Sales-Jr-dev" target="_blank">Github</a>
+           </div>
+           <div class="hamburguer" id="hamburguer">
+             <span></span>
+             <span></span>
+             <span></span>
+           </div>
+           <div class="perfil">
+            <img src="./imagens/logosem-removebg-preview.png" alt="">
+           </div>
+      </header>
+      <main>
+        <section id="aboutMe" class="about">
+          <div class="aboutBox">
+            <div class="aboutbox01">
+              <img src="imagens/sem image.png" alt="">
+            </div>
+            <div class="aboutbox02">
+              <h1>
+                Sobre min
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Numquam, tenetur harum.
+                Dolorem adipisci deserunt eaque ducimus quam
+                veritatis, nam cum, cumque ex blanditiis
+                quis repellendus fuga. Assumenda iste nesciunt
+                 exercitationem.
+              </p>
+              <button type="button">Download</button>
+              <button type="button">CV</button>
+            </div>
+          </div>
+        </section>
+        <section id="projects" class="projects">
+          <h1>Projetos</h1>
+          <div class="boxProject" id="boxProject">
+           <div class="card">
+              <img class="image" src="imagens/WhatsApp Image 2022-08-20 at 17.52.49 (1).jpeg" alt="">
+              <h2>
+                Projeto 01
+              </h2>
+              <p class="p">
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Provident, at! Tenetur,
+                provident recusandae. Animi quibusdam inventore
+                fuga consectetur incidunt dolores nesciunt, omnis
+                rem architecto asperiores,
+                 maxime, eligendi accusamus nemo! Minus.
+              </p>
+      
+           </div>
+         </div>
+         <button type="button" id="addBtn">Adicionar</button>
+      
+        </section>
+        <section id="contacts" class="contacts">
+          <h1 class="contactsH1">
+            Contatos
+          </h1>
+        <div class="contactsForm">
+          <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="digite seu nome">
+            <label for="email">Email:</label>
+            <input type="email" name="" id="email" placeholder="Digite seu e-mail">
+            <label for="message">Mensagem:</label>
+            <input id="message" type="text">
+            <input type="submit" id="submit" value="SEND">
+          </form>
+        </div>
+        <div class="contacts02">
+          <div>
+            <h2>Contatos</h2>
+          </div>
+          <div>
+            <i class="fa-solid fa-phone"></i><a href="#">(81) 99458-5700</a>
+          </div>
+          <div class="contactEmail">
+            <i class="fa-solid fa-envelope"></i><a href="#">Josuemendes2309@gmail.com</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-house-chimney"></i><h3>Abreu e Lima, Pernambuco, Brasil</h3>
+          </div>
+          <div>
+            <a rel="roopener" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a rel="noopener" href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a rel="noopener" href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a rel="noopener" href="#"><i class="fa-brands fa-google"></i></a>
+          </div>
+        </div>
+        </section>
+      
+      </main>
+      <footer>
+        <div>
+          <a rel="roopener" href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+            <a rel="noopener" href="#"><i class="fa-brands fa-square-instagram"></i>Instagram</a>
+            <a rel="noopener" href="#"><i class="fa-brands fa-square-twitter"></i>Twiter</a>
+            <a rel="noopener" href="#"><i class="fa-brands fa-google"></i>Google</a>
+        </div>
+        <div>
+          <a href="#"><i class="fa-brands fa-linkedin"></i>Linkdin</a>
+          <a href="#"><i class="fa-brands fa-github"></i>Github</a>
+        </div>
+        <div>
+          <h1>Skills</h1>
+          <ul>
+            <li><i class="fa-brands fa-square-js"></i>  JavaScrip</li>
+            <li><i class="fa-brands fa-react"></i>  React</li>
+            <li>jQuery</li>
+            <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+            <li><i class="fa-brands fa-html5"></i>  HTML</li>
           </ul>
-         </nav>
-         <div class="texts">
-          <h4>Olá, eu sou</h4>
-          <h1>JOSUÉ MENDES</h1>
-          <h3>DESENVOLVIMENTO FRONT-END</h3>
-         </div>
-         <div class="btnLinks">
-          <a rel="noopener" href="https://www.linkedin.com/in/josue-mendes-311181207/" target="_blank">Linkedin</a>
-          <a rel="noopener" href="https://github.com/Josue-Mendes-Sales-Jr-dev" target="_blank">Github</a>
-         </div>
-         <div class="hamburguer" id="hamburguer">
-           <span></span>
-           <span></span>
-           <span></span>
-         </div>
-         <div class="perfil">
-          <img src="./imagens/logosem-removebg-preview.png" alt="">
-
-         </div>
-    </header>
-    <main>
-      <section id="aboutMe" class="about">
-
-        <div class="aboutBox">
-
-          <div class="aboutbox01">
-            <img src="imagens/sem image.png" alt="">
-          </div>
-
-          <div class="aboutbox02">
-            <h1>
-              Sobre min
-            </h1>
-            <p>
-
-              Lorem ipsum dolor sit amet consectetur, 
-              adipisicing elit. Numquam, tenetur harum. 
-              Dolorem adipisci deserunt eaque ducimus quam 
-              veritatis, nam cum, cumque ex blanditiis 
-              quis repellendus fuga. Assumenda iste nesciunt
-               exercitationem.
-
-            </p>
-            <button type="button">Download</button>
-            <button type="button">CV</button>
-          </div>
         </div>
-
-      </section>
-
-      <section id="projects" class="projects">
-        <h1>Projetos</h1>
-        <div class="boxProject" id="boxProject">
-        
-         <div class="card">
-            <img class="image" src="imagens/WhatsApp Image 2022-08-20 at 17.52.49 (1).jpeg" alt="">
-            <h2>
-              Projeto 01
-            </h2>
-            <p class="p">
-              Lorem ipsum dolor sit amet consectetur 
-              adipisicing elit. Provident, at! Tenetur, 
-              provident recusandae. Animi quibusdam inventore 
-              fuga consectetur incidunt dolores nesciunt, omnis 
-              rem architecto asperiores,
-               maxime, eligendi accusamus nemo! Minus.
-
-            </p>
-         
-         </div>
-       </div>
-       <button type="button" id="addBtn">Adicionar</button>
-       
-      </section>
-      <section id="contacts" class="contacts">
-        <h1 class="contactsH1">
-          Contatos
-        </h1>
-      <div class="contactsForm">
-        <form action="#">
-          <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="digite seu nome">
-          <label for="email">Email:</label>
-          <input type="email" name="" id="email" placeholder="Digite seu e-mail">
-          <label for="message">Mensagem:</label>
-          <input id="message" type="text">
-          <input type="submit" id="submit" value="SEND">
-        </form>
-
-      </div>
-      <div class="contacts02">
-        <div>
-          <h2>Contatos</h2>
-        </div>
-        <div>
-          <i class="fa-solid fa-phone"></i><a href="#">(81) 99458-5700</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-envelope"></i><a href="#">Josuemendes2309@gmail.com</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-house-chimney"></i><h3>Abreu e Lima, Pernambuco, Brasil</h3>
-        </div>
-        <div>
-          <a rel="roopener" href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a rel="noopener" href="#"><i class="fa-brands fa-square-instagram"></i></a>
-          <a rel="noopener" href="#"><i class="fa-brands fa-square-twitter"></i></a>
-          <a rel="noopener" href="#"><i class="fa-brands fa-google"></i></a>
-        </div>
-
-      </div>
-      </section>
-     
-
-    </main>
-
-    <footer>
-      <div>
-        <a rel="roopener" href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
-          <a rel="noopener" href="#"><i class="fa-brands fa-square-instagram"></i>Instagram</a>
-          <a rel="noopener" href="#"><i class="fa-brands fa-square-twitter"></i>Twiter</a>
-          <a rel="noopener" href="#"><i class="fa-brands fa-google"></i>Google</a>
-      </div>
-      <div>
-        <a href="#"><i class="fa-brands fa-linkedin"></i>Linkdin</a>
-        <a href="#"><i class="fa-brands fa-github"></i>Github</a>
-      </div>
-      <div>
-        <h1>Skills</h1>
-        <ul>
-          <li><i class="fa-brands fa-square-js"></i>  JavaScrip</li>
-          <li><i class="fa-brands fa-react"></i>  React</li>
-          <li>jQuery</li>
-          <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-          <li><i class="fa-brands fa-html5"></i>  HTML</li>
-        </ul>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/30c31e337d.js" crossorigin="anonymous"></script>
